@@ -24,9 +24,7 @@ If you need more flexibilty, or your field contains subfields that need their ow
 1. Return your needed columns and cells by implementing `getColumns` and `getCells`. (See `AddressField` for some inspiration)
 1. Add your class
 
-```
-<?php
-
+```php
 // for example in your functions.php 
 
 apply_filter('gfexcel_transformer_fields', function($fields) {
