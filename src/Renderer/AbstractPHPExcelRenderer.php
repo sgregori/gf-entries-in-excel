@@ -159,6 +159,7 @@ abstract class AbstractPHPExcelRenderer
 
         // Protect users from accidental override with invalid characters.
         $worksheet_title = str_replace($invalidCharacters, '', $worksheet_title);
+        $worksheet_title = utf8_encode($worksheet_title); // Preventing errors of charset
         $worksheet->setTitle($worksheet_title);
         return $this;
     }
